@@ -59,7 +59,7 @@ export default function ProductDetailPage({ user }) {
         {product.imageUrl && (
           <div>
             <img
-              src={`http://localhost:3000${product.imageUrl}`}
+              src={`https://t-m-dw2u.onrender.com/api${product.imageUrl}`}
               alt={product.name}
               style={{
                 width: 320,
