@@ -1,8 +1,10 @@
 import axios from 'axios';
+import { API_BASE_URL } from '../config';
 
 const http = axios.create({
-  baseURL: 'https://t-m-dw2u.onrender.com/api',
+  baseURL: API_BASE_URL,
 });
+
 http.interceptors.request.use((config) => {
   const token = localStorage.getItem('accessToken');
   if (token) {

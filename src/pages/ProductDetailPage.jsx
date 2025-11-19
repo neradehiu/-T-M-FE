@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getProductDetail } from '../api/products';
 import { addToCart } from '../api/cart';
+import { ASSET_BASE_URL } from '../config';
 
 export default function ProductDetailPage({ user }) {
   const { id } = useParams();
@@ -59,7 +60,7 @@ export default function ProductDetailPage({ user }) {
         {product.imageUrl && (
           <div>
             <img
-              src={`https://t-m-dw2u.onrender.com/api${product.imageUrl}`}
+              src={`${ASSET_BASE_URL}${p.imageUrl}`}
               alt={product.name}
               style={{
                 width: 320,
