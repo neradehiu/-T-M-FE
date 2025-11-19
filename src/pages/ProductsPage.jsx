@@ -89,7 +89,7 @@ export default function ProductsPage({ user }) {
                 <div key={p.id} className="card">
                   {p.imageUrl && (
                     <img
-                      src={`http://localhost:3000${p.imageUrl}`}
+                      src={`https://t-m-dw2u.onrender.com/api${p.imageUrl}`}
                       alt={p.name}
                       className="product-card-img"
                     />
